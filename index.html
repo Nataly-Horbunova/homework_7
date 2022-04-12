@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+        // =====  1. =====
+
+        const collection = ['ivan', 'olga', 'petr', 'oleg', 'serj'];
+        const collectionResult = [];
+        const indexEl = +prompt('Ведите индекс', '0');
+        const newUser = prompt('Ведите имя нового пользователя', 'alex');
+
+        function addUserBetween(indexEl, newUser) {
+
+            for (let i = 0; i < collection.length; i++) {
+
+                if (i < indexEl) {
+                    collectionResult[collectionResult.length] = collection[i];
+                } else if (i === indexEl) {
+                    collectionResult[collectionResult.length] = newUser;
+                    collectionResult[collectionResult.length] = collection[i];
+                } else if (i > indexEl) {
+                    collectionResult[collectionResult.length] = collection[i];
+                }
+            }
+            return collectionResult;
+        }
+
+        console.log(addUserBetween(indexEl, newUser));
+
+
+        // =====  2.1 =====
+
+        const arr = ['ivan', 'olga', 'petr', 'olga', 'serj', 'olga', 'alla'];
+        const element = prompt('Введите елемент массива', '');
+
+        function indexOf(element) {
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === element) {
+                    return i;
+                }
+            }
+        }
+
+        console.log(indexOf(element));
+
+
+
+        // =====  2.2 =====
+
+        const arrElement = prompt('Введите елемент массива', '')
+
+        function lastIndexOf(arrElement) {
+
+            for (let i = arr.length; i--;) {
+                if (arr[i] === arrElement) {
+                    return i;
+                }
+            }
+        }
+
+        console.log(lastIndexOf(arrElement));
+
+
+
+        // =====  2.3 =====
+
+        const arrayElement = prompt('Введите елемент массива', '')
+
+        function includes(arrayElement) {
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === arrayElement) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        console.log(includes(arrayElement));
+
+    </script>
+</body>
+
+</html>
