@@ -29,6 +29,7 @@
                 } else if (i > indexEl) {
                     collectionResult[collectionResult.length] = collection[i];
                 }
+
             }
             return collectionResult;
         }
@@ -48,9 +49,11 @@
                     return i;
                 }
             }
+            return -1;
         }
 
         console.log(indexOf(element));
+
 
 
 
@@ -65,6 +68,7 @@
                     return i;
                 }
             }
+            return -1;
         }
 
         console.log(lastIndexOf(arrElement));
